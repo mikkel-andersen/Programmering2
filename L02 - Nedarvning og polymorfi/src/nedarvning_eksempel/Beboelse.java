@@ -1,3 +1,5 @@
+package nedarvning_eksempel;
+
 public class Beboelse {
 
     private String adresse;
