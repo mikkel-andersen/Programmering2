@@ -7,8 +7,13 @@ public class Sommerhus extends Hus{
         super(adresse, kvm, grundKvm);
         this.beboet = beboet;
     }
-    // Hej
+
     public boolean isBeboet() {
         return beboet;
+    }
+
+    @Override
+    public int ejendomsVaerdi() {
+        return super.ejendomsVaerdi() - 24;
     }
 }

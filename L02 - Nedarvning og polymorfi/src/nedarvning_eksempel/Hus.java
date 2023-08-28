@@ -10,4 +10,9 @@ public class Hus extends Beboelse {
     }
 
 
+    public int ejendomsVaerdi() {
+        return super.getKvm() * 290 + grundKvm * 40;
+    }
+
+
 }
