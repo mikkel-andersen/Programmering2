@@ -7,7 +7,7 @@ public class Sommerhus extends Hus{
         super(adresse, kvm, grundKvm);
         this.beboet = beboet;
     }
-
+    // Hej
     public boolean isBeboet() {
         return beboet;
     }
