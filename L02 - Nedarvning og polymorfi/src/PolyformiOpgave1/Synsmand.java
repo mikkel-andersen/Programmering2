@@ -21,6 +21,7 @@ public class Synsmand extends Mekaniker{
         antalSynDenneUge++;
     }
 
+    @Override
     public double beregnLoen() {
         return super.beregnLoen() + (antalSynDenneUge * 29);
     }

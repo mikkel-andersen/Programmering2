@@ -8,8 +8,8 @@ public class App {
 
         ArrayList<Værkfører> liste1 = new ArrayList<>();
 
-        Værkfører v1 = new Værkfører("Værkfører 1", "Værkfører 1 adresse", 2009, 150, 250, 2010);
-        Værkfører v2 = new Værkfører("Værkfører 2", "Værkfører 2 adresse", 2005, 245, 500, 2008);
+        Værkfører v1 = new Værkfører("Værkfører 1", "Værkfører 1 adresse", 2009, 195, 790, 2010);
+        Værkfører v2 = new Værkfører("Værkfører 2", "Værkfører 2 adresse", 2005, 245, 1120, 2008);
 
         liste1.add(v1);
         liste1.add(v2);
