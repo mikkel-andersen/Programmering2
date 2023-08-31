@@ -33,6 +33,8 @@ public class App {
         OrderLine line10 = new OrderLine(10, 1, p4);
 
         O1.createOrderLine(2, p1);
+        O3.createOrderLine(3, p5);
+
 
         System.out.println(O1.getOrderPrice(O1));
 
@@ -51,6 +53,9 @@ public class App {
 
 
         System.out.println(line2.getOrderLinePrice(line2));
+
+        System.out.println(C1.totalBuy());
+        System.out.println(C2.totalBuy());
 
 
 
