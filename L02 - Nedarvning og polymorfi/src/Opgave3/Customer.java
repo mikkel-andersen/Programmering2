@@ -10,6 +10,7 @@ import java.util.List;
 public class Customer {
 	private String name;
 	private LocalDate birthday;
+	private Discount discount;
 	private List<Order> orders = new ArrayList<Order>();
 
 	/**
@@ -51,9 +52,21 @@ public class Customer {
 		}
 	}
 
-	public int totalBuy(){
+	public double totalBuy(){
+		double total = 0;
+		for(Order o : orders){
+			total += o.getOrderPrice(o);
+		}
+		return total;
+	}
 
+	public void setDiscount(Discount discount) {
+		if (this.discount != discount) {
+			this.discount = discount;
+		}
 
 	}
+
+
 
 }
