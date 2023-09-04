@@ -8,7 +8,7 @@ public class PercentDiscount extends Discount {
         this.discountPercentage = discountPercentage;
     }
 
-    public int getDiscountPercentage() {
+    public double getDiscountPercentage() {
         return discountPercentage;
     }
 

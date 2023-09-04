@@ -9,7 +9,6 @@ public class FixedDiscount extends Discount {
         this.discountLimit = discountLimit;
         this.fixedDiscount = fixedDiscount;
     }
-
     @Override
     public double getDiscount(double price) {
         if (price >= discountLimit) {
