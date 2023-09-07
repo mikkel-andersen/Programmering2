@@ -38,16 +38,12 @@ public class Customer implements Comparable<Customer> {
 
     @Override
     public int compareTo(Customer o) {
-        if (this.efternavn.compareTo(o.efternavn) != 0) {
-            return this.efternavn.compareTo(o.efternavn);
-        } else if (this.fornavn.compareTo(o.fornavn) != 0) {
-            return this.fornavn.compareTo(o.fornavn);
-        } else if (this.alder > o.alder) {
-            return 1;
-        } else if (this.alder < o.alder) {
-            return -1;
+        if (this.efternavn.compareTo(o.getEfternavn()) != 0) {
+            return this.efternavn.compareTo(o.getEfternavn());
+        } else if (this.fornavn.compareTo(o.getFornavn()) != 0) {
+            return this.fornavn.compareTo(o.getFornavn());
         } else {
-            return 0;
+            return this.alder - o.getAlder();
         }
     }
 
