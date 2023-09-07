@@ -73,8 +73,4 @@ public class Customer {
 		}
 		return total * discount.getDiscount(this.birthYear);
 	}
-	}
-
-
-
 }
