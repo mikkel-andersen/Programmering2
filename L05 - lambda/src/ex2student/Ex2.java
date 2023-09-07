@@ -16,7 +16,19 @@ public class Ex2 {
 				new Runner("Hans", 28)));
 		System.out.println(runners);
 		runners.forEach(runner -> System.out.println("Name: " + runner.getName() + ", laptime: " + runner.getLapTime()));
-		runners.forEach(runner -> runner.getLapTime() < 30);
+
+		System.out.println();
+
+		runners.forEach(runner -> {
+			if (runner.getLapTime() < 30) {
+				System.out.println("Name: " + runner.getName() + ", laptime: " + runner.getLapTime());
+			}
+		});
+
+		System.out.println();
+
+		runners.sort((r1, r2) -> r1.getLapTime() - r2.getLapTime());
+		System.out.println(runners);
 
 	}
 }
