@@ -52,15 +52,14 @@ public class App {
         C2.addOrder(O6);
 
         //Discounts
-        Discount d1 = new AgeDiscount();
+        Discount d1 = new AgeDiscount(C1.getBirthyear());
 
         C1.setDiscount(d1);
 
 
 
         System.out.println(line2.getOrderLinePrice(line2));
-        System.out.println(C1.totalBuyDiscount(C1.totalBuyDiscount()));
-        System.out.println(C1.totalBuy());
+        System.out.println(d1.getDiscount(C1.totalBuy()));
         System.out.println(C2.totalBuy());
 
 
