@@ -1,6 +1,5 @@
 package Opgave3;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,19 +8,20 @@ import java.util.List;
  */
 public class Customer {
 	private String name;
-	private LocalDate birthday;
+	private double birthyear;
+
 	private Discount discount;
 	private List<Order> orders = new ArrayList<Order>();
 
 	/**
 	 * Create a new Opgave3.Customer.
-	 * 
-	 * @param name     the name.
-	 * @param birthday birthday of the customer.
+	 *
+	 * @param name      the name.
+	 * @param birthyear
 	 */
-	public Customer(String name, LocalDate birthday) {
+	public Customer(String name, double birthyear) {
 		this.name = name;
-		this.birthday = birthday;
+		this.birthyear = birthyear;
 	}
 
 	public String getName() {
@@ -32,8 +32,8 @@ public class Customer {
 		this.name = name;
 	}
 
-	public LocalDate getBirthday() {
-		return this.birthday;
+	public double getBirthyear() {
+		return this.birthyear;
 	}
 
 	public List<Order> getOrders() {

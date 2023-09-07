@@ -1,6 +1,6 @@
 package Opgave3;
 
-public class PercentDiscount extends Discount {
+public class PercentDiscount implements Discount {
 
     private double discountPercentage;
 

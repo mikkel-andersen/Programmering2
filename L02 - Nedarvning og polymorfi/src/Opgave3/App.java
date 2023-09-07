@@ -41,11 +41,11 @@ public class App {
 
 
         //Customers
-        Customer C1 = new Customer("Mathias", LocalDate.of(2000, 2, 14));
+        Customer C1 = new Customer("Mathias", 1999);
         C1.addOrder(O1);
         C1.addOrder(O2);
 
-        Customer C2 = new Customer("Asger", LocalDate.of(2002, 12, 10));
+        Customer C2 = new Customer("Asger", 2018);
         C2.addOrder(O3);
         C2.addOrder(O4);
         C2.addOrder(O5);

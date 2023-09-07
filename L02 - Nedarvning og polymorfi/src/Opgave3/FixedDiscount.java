@@ -1,6 +1,6 @@
 package Opgave3;
 
-public class FixedDiscount extends Discount {
+public class FixedDiscount implements Discount {
 
     private int discountLimit;
     private int fixedDiscount;

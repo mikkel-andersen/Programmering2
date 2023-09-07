@@ -1,12 +1,10 @@
 package Opgave3;
 
-import java.util.ArrayList;
 
-public class Discount {
+public interface Discount {
 
-    public double getDiscount(double price) {
-        return price;
-
-    }
+    public double getDiscount(double price);
 
 }
+
+
