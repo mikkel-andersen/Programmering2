@@ -18,20 +18,20 @@ public class App {
 
     public static Customer lastCustomer(Customer[] customers) {
         Customer lastCustomer = customers[0];
-        for (int i = 0; i < customers.length; i++) {
-            if (customers[i].compareTo(lastCustomer) > 0) {
-                lastCustomer = customers[i];
+        for (Customer customer : customers) {
+            if (customer.compareTo(lastCustomer) > 0) {
+                lastCustomer = customer;
             }
         }
         return lastCustomer;
     }
 
     public static Customer[] afterCustomer(Customer[] customers, Customer customer) {
-        Customer[] afterCustomers = new Customer[customers.length];
+        Customer[] afterCustomers = new Customer[customers.length - 2];
         int j = 0;
-        for (int i = 0; i < customers.length; i++) {
-            if (customers[i].compareTo(customer) > 0) {
-                afterCustomers[j] = customers[i];
+        for (Customer value : customers) {
+            if (value.compareTo(customer) > 0) {
+                afterCustomers[j] = value;
                 j++;
             }
         }
