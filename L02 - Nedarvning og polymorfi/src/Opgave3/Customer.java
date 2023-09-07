@@ -8,8 +8,7 @@ import java.util.List;
  */
 public class Customer {
 	private String name;
-	private double birthyear;
-
+	private double birthYear;
 	private Discount discount;
 	private List<Order> orders = new ArrayList<Order>();
 
@@ -21,7 +20,7 @@ public class Customer {
 	 */
 	public Customer(String name, double birthyear) {
 		this.name = name;
-		this.birthyear = birthyear;
+		this.birthYear = birthyear;
 	}
 
 	public String getName() {
@@ -33,7 +32,7 @@ public class Customer {
 	}
 
 	public double getBirthyear() {
-		return this.birthyear;
+		return this.birthYear;
 	}
 
 	public List<Order> getOrders() {
@@ -65,6 +64,15 @@ public class Customer {
 			this.discount = discount;
 		}
 
+	}
+
+	public double totalBuyDiscount() {
+		double total = 0;
+		for (Order o : orders) {
+			total += o.getOrderPrice(o);
+		}
+		return total * discount.getDiscount(this.birthYear);
+	}
 	}
 
 
