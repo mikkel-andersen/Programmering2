@@ -15,9 +15,9 @@ public class App {
 
     public static Measurable max(Measurable[] objects) {
         Measurable max = objects[0];
-        for (int i = 0; i < objects.length; i++) {
-            if (objects[i].getMeasure() > max.getMeasure()) {
-                max = objects[i];
+        for (Measurable object : objects) {
+            if (object.getMeasure() > max.getMeasure()) {
+                max = object;
             }
         }
         return max;
@@ -25,8 +25,8 @@ public class App {
 
     public static double average(Measurable[] objects) {
         double average = 0;
-        for (int i = 0; i < objects.length; i++) {
-            average += objects[i].getMeasure();
+        for (Measurable object : objects) {
+            average += object.getMeasure();
         }
         return average / objects.length;
 
