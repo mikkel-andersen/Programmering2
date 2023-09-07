@@ -29,9 +29,9 @@ public class App {
     public static Customer[] afterCustomer(Customer[] customers, Customer customer) {
         Customer[] afterCustomers = new Customer[customers.length - 2];
         int j = 0;
-        for (Customer value : customers) {
-            if (value.compareTo(customer) > 0) {
-                afterCustomers[j] = value;
+        for (Customer c : customers) {
+            if (c.compareTo(customer) > 0) {
+                afterCustomers[j] = c;
                 j++;
             }
         }
