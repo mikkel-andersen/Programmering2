@@ -4,8 +4,8 @@ class BilForsikringTest {
 
     @org.junit.jupiter.api.Test
     void beregnPraemie() {
-        //Arrange
 
+        //Arrange
         BilForsikring bilforsikring = new BilForsikring();
         bilforsikring.setGrundpaemie(1000);
 
