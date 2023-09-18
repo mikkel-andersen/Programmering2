@@ -13,8 +13,32 @@ public class Bibliotek {
      */
     public int beregnBøde(LocalDate beregnetDato, LocalDate faktiskDato, boolean voksen) {
         int bøde = 0;
+        int dage = (int) (faktiskDato.toEpochDay() - beregnetDato.toEpochDay());
+        if (dage < 1) {
+            return bøde;
+        }
+        if (voksen) {
+            bøde = 20;
+        } else {
+            bøde = 10;
+        }
 
-
+        if (faktiskDato.isAfter(beregnetDato)) {
+            int days = (int) (faktiskDato.toEpochDay() - beregnetDato.toEpochDay());
+            if (days > 7 && days <= 14) {
+                if (voksen) {
+                    bøde = 60;
+                } else {
+                    bøde = 30;
+                }
+            } else if (days > 14) {
+                if (voksen) {
+                    bøde = 90;
+                } else {
+                    bøde = 45;
+                }
+            }
+        }
         return bøde;
     }
 }
