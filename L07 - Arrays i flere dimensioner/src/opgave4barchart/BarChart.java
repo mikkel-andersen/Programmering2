@@ -27,8 +27,13 @@ public class BarChart {
      * @return the max value found.
      */
     public int findMax(ArrayList<Integer> list) {
-        // TODO: find max in list
-        return 0;
+        int max = list.get(0);
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) > max) {
+                max = list.get(i);
+            }
+        }
+        return max;
     }
 
     /**
@@ -37,5 +42,13 @@ public class BarChart {
     public void printBarChart() {
         int max = findMax(this.list);
         // TODO: print out bar chart
+        for (int i = 0; i < list.size(); i++) {
+            int value = list.get(i);
+            int stars = (int) (value * 40.0 / max);
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }

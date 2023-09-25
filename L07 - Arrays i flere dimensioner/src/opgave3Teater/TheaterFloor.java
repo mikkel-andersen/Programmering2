@@ -17,8 +17,14 @@ public class TheaterFloor {
 	 */
 
 	public int buySeat(int row, int seat) {
-		// TODO
-		return -1;
+		int pris = 0;
+		if (seats[row][seat] == 0) {
+			return pris;
+		} else {
+			pris = seats[row][seat];
+			seats[row][seat] = 0;
+			return pris;
+		}
 	}
 
 	/**
@@ -26,17 +32,30 @@ public class TheaterFloor {
 	 * prisen returneres. Der returneres 0, hvis der ikke er nogen pladser ledige
 	 * til den pågældende pris.
 	 *
-	 * @param row
-	 * @param seat
+
 	 * @return
 	 */
 	public int buySeat(int price) {
-		// TODO
-		return -1;
+		int pris = 0;
+		for (int i = 0; i < seats.length; i++) {
+			for (int j = 0; j < seats.length; j++) {
+				if (price == seats[i][j]) {
+					pris = seats[i][j];
+					seats[i][j] = 0;
+					return pris;
+				}
+			}
 
+		}
+		return pris;
 	}
 
 	public void printTheaterFloor() {
-		// TODO
+			for (int row = 0; row < seats.length; row++) {
+				for (int col = 0; col < seats[row].length; col++) {
+					System.out.print(seats[row][col] + "  ");
+				}
+				System.out.println();
+			}
 	}
 }
