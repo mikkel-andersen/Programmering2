@@ -17,7 +17,6 @@ public class Opgave2DobbelArray {
             for (int j = 0; j < values.length; j++) {
                 da.setValueAt(values, i, j, 5);
             }
-
         }
         System.out.println();
         System.out.println("Nedenfor skulle der stå 5 på alle pladser");
