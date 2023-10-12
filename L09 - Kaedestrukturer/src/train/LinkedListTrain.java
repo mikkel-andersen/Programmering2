@@ -118,6 +118,5 @@ public class LinkedListTrain {
     public void insertAt(WagonNode wagon, int position) {
         // TODO: Assignment 5: Implement this insert method...
 
-        throw new UnsupportedOperationException("Not implemented");
     }
 }
