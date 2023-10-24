@@ -94,7 +94,7 @@ public class LinkedListTrain {
         if (firstWagon == null) {
             return false;
         } else if (firstWagon.equals(wagon)) {
-            firstWagon = firstWagon.getNextWagon();
+            removeFirst();
             return true;
         } else {
             WagonNode temp = firstWagon;
@@ -117,6 +117,21 @@ public class LinkedListTrain {
      */
     public void insertAt(WagonNode wagon, int position) {
         // TODO: Assignment 5: Implement this insert method...
+        boolean found = false;
+        WagonNode current = firstWagon;
+        WagonNode previous = null;
+        int count = 0;
 
+        while (!found) {
+            System.out.println(current.getWagonName());
+            previous = current;
+            count++;
+            if (position == count) {
+                found = true;
+                previous.setNextWagon(wagon);
+                wagon.setNextWagon(current);
+
+            }
+        }
     }
 }
