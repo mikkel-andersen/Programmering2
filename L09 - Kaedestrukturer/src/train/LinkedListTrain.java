@@ -122,15 +122,20 @@ public class LinkedListTrain {
         WagonNode previous = null;
         int count = 0;
 
-        while (!found) {
-            System.out.println(current.getWagonName());
-            previous = current;
-            count++;
-            if (position == count) {
-                found = true;
-                previous.setNextWagon(wagon);
-                wagon.setNextWagon(current);
+        if (position == 0) {
+            addFirst(wagon);
+        } else {
 
+            while (count != position) {
+                System.out.println(current.getWagonName());
+                previous = current;
+                current = current.getNextWagon();
+                count++;
+                if (position == count) {
+                    previous.setNextWagon(wagon);
+                    wagon.setNextWagon(current);
+
+                }
             }
         }
     }
