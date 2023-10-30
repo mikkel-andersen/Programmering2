@@ -16,11 +16,13 @@ import org.junit.jupiter.api.TestMethodOrder;
 import queue.Queue;
 import queue.SnackQueue;
 import snacks.Limb;
+import snackssupply.SnackBar;
 
 @TestMethodOrder(OrderAnnotation.class)
 class QueueTest
 {
     private Queue queue;
+    private SnackBar snackBar;
 
     private Limb limb1;
     private Limb limb2;
@@ -37,6 +39,7 @@ class QueueTest
         // --------------------------------------------------
 
         this.queue = new Queue(5);
+        this.snackBar = new SnackBar();
 
         this.limb1 = new Limb(Limb.Types.Finger);
         this.limb2 = new Limb(Limb.Types.Foot);
@@ -158,5 +161,19 @@ class QueueTest
 
         queue.dequeue();
         assertTrue(queue.isEmpty());
+    }
+
+
+    @Test
+    @Order(4)
+    void sorteringAfSnackbar() {
+        queue.enqueue(limb1);
+        queue.enqueue(limb2);
+        queue.enqueue(limb3);
+        queue.enqueue(limb4);
+        queue.enqueue(limb5);
+        queue.enqueue(limb6);
+
+        assertEquals(snackBar.sortSnacks());
     }
 }
