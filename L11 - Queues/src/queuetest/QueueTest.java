@@ -38,7 +38,7 @@ class QueueTest
         // ARRANGE
         // --------------------------------------------------
 
-        this.queue = new NodeQueue(5);
+        this.queue = new NodeQueue();
 
         Produkt kloster = new Produkt("Klosterbryg");
         Produkt sweet = new Produkt("Sweet Georgia Brown");
