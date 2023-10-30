@@ -6,15 +6,21 @@ import java.util.NoSuchElementException;
  * An implementation of a queue as a linked list.
  */
 public class NodeQueue implements QueueI {
-    private int head;
-    private int tail;
-    private int currentSize;
+    private Node head;
+    private Node tail;
+    private int size;
     private Node node;
 
     class Node
     {
         public Object data;
         public Node next;
+
+        public Node(Object data) {this.data = data;}
+
+        public void setNext(Node next) {this.next = next;}
+
+        public Node getNext() {return next;}
     }
 
     /**
@@ -24,29 +30,25 @@ public class NodeQueue implements QueueI {
     public NodeQueue()
     {
         // TODO: Assignment 1: Implement this constructor...
-        head = 0;
-        tail = 0;
-        currentSize = 0;
-        node = new Node();
-        node.data = null;
-        node.next = null;
+        size = 0;
+        this.head = null;
+        this.tail = null;
     }
 
     @Override
     public void enqueue(Object element)
     {
         // TODO: Assignment 1: Implement this method...
-        if (node.data == null)
-        {
-            node.data = element;
-            currentSize++;
+        Node elementAddToQueue = new Node(element);
+        if (head == null) {
+            head = elementAddToQueue;
+            tail = elementAddToQueue;
+            size++;
         }
-        else
-        {
-            Node newNode = new Node();
-            newNode.data = element;
-            node.next = newNode;
-            currentSize++;
+        else {
+            tail.setNext(elementAddToQueue);
+            tail = elementAddToQueue;
+            size++;
         }
     }
 
@@ -54,28 +56,25 @@ public class NodeQueue implements QueueI {
     public Object dequeue()
     {
         // TODO: Assignment 1: Implement this method...
-        if (node.data == null)
-        {
+        if (head == null) {
             throw new NoSuchElementException();
-        }
-        else
-        {
-            Object removed = node.data;
-            node = node.next;
-            currentSize--;
-            return removed;
+        } else {
+            Object element = head.data;
+            head = head.next;
+            size--;
+            return element;
         }
     }
 
     @Override
     public int size()
     {
-       return currentSize;
+       return size;
     }
 
     @Override
     public boolean isEmpty()
     {
-        return node.data == null;
+        return head == null;
     }
 }
