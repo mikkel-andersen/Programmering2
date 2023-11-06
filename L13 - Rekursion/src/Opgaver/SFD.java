@@ -3,7 +3,7 @@ package Opgaver;
 public class SFD {
 
     public static void main(String[] args) {
-        System.out.println(SFD(100, 900));
+        System.out.println(SFD(900, 150));
     }
 
     public static int SFD(int a, int b) {
