@@ -1,7 +1,5 @@
 package queue;
 
-import snacks.Snack;
-
 import java.util.NoSuchElementException;
 
 public class Queue<T> {
@@ -74,13 +72,10 @@ public class Queue<T> {
     /**
      * Grows the element array if the current size equals the capacity.
      */
-    private void growIfNecessary()
-    {
-        if (currentSize == elements.length)
-        {
+    private void growIfNecessary() {
+        if (currentSize == elements.length) {
             Object[] newElements = new Object[2 * elements.length];
-            for (int i = 0; i < elements.length; i++)
-            {
+            for (int i = 0; i < elements.length; i++) {
                 newElements[i] = elements[(head + i) % elements.length];
             }
             elements = newElements;

@@ -167,13 +167,11 @@ class QueueTest
     @Test
     @Order(4)
     void sorteringAfSnackbar() {
-        queue.enqueue(limb1);
-        queue.enqueue(limb2);
-        queue.enqueue(limb3);
-        queue.enqueue(limb4);
-        queue.enqueue(limb5);
-        queue.enqueue(limb6);
-
-        assertEquals(snackBar.sortSnacks());
+        Queue q1 = new Queue(5);
+        queue.enqueue(5);
+        queue.enqueue(4);
+        queue.enqueue(10);
+        queue.enqueue(7);
+        queue.enqueue(1);
     }
 }
