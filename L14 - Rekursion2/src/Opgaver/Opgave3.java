@@ -14,6 +14,6 @@ public class Opgave3 {
     }
 
     public static boolean talHelper(ArrayList<Integer> list, int n, int low, int high, int mid) {
-
+        return false;
     }
 }
