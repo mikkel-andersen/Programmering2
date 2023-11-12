@@ -7,7 +7,7 @@ public class Opgave3 {
 
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>(List.of(1,2,3,4,5,6,7,8,9,10));
-        System.out.println(tal(list, 7));
+        System.out.println(tal(list, 12));
     }
 
 
@@ -16,19 +16,19 @@ public class Opgave3 {
     }
 
     public static boolean talHelper(ArrayList<Integer> list, int n, int low, int high, int mid) {
-        int mLow = low;
-        int mhigh = high;
-        int mmid = mid;
+
+        if (low == high) {
+            return false;
+        }
+
         if (list.get(mid) == n) {
             return true;
         } else if (list.get(mid) > n) {
-            mhigh = mid;
-            mmid = low + (high - low) / 2;
-            return talHelper(list, n, mLow, mhigh, mmid);
+            return talHelper(list, n, low, mid, low + ((mid - low) / 2));
         } else {
-            mLow = mid;
-            mmid = low + (high - low) / 2;
-            return talHelper(list, n, mLow, mmid, mhigh);
+            return talHelper(list, n, mid, high, mid + ((high - mid) / 2));
         }
+
+
     }
 }
