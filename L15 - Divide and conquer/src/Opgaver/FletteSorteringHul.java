@@ -47,7 +47,7 @@ public class FletteSorteringHul {
             i2++;
         }
         for (int i = 0; i < temp.size(); i++) {
-            list.set(i + low, temp.get(i));
+            list.set(i + low, temp.get(i)); //Low er 0 jeg er ligeglad med hvad de siger
         }
     }
 }
