@@ -1,4 +1,4 @@
-package Opgave3;
+package Opgaver.Opgave3;
 
 import java.util.HashSet;
 import java.util.Set;

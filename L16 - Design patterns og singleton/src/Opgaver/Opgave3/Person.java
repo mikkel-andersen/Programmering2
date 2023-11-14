@@ -1,4 +1,4 @@
-package Opgave3;
+package Opgaver.Opgave3;
 
 public class Person {
     private String navn;

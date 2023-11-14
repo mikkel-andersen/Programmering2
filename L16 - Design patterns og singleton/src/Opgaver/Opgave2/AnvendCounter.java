@@ -1,4 +1,4 @@
-package Opgave2;
+package Opgaver.Opgave2;
 
 public class AnvendCounter {
 

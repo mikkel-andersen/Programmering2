@@ -1,6 +1,4 @@
-package Opgave3;
-
-import java.util.Arrays;
+package Opgaver.Opgave3;
 
 public class AnvendPersonAdminstrator {
 
