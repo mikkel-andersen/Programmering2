@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Ekstra arbejde/Ekstra arbejde.iml" filepath="$PROJECT_DIR$/Ekstra arbejde/Ekstra arbejde.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JuleUdfordring/JuleUdfordring.iml" filepath="$PROJECT_DIR$/JuleUdfordring/JuleUdfordring.iml" />
       <module fileurl="file://$PROJECT_DIR$/L02 - Nedarvning og polymorfi/L02 - Nedarvning og polymorfi.iml" filepath="$PROJECT_DIR$/L02 - Nedarvning og polymorfi/L02 - Nedarvning og polymorfi.iml" />
       <module fileurl="file://$PROJECT_DIR$/L03 - Abstrakte klasser og indkapsling/L03 - Abstrakte klasser og indkapsling.iml" filepath="$PROJECT_DIR$/L03 - Abstrakte klasser og indkapsling/L03 - Abstrakte klasser og indkapsling.iml" />
       <module fileurl="file://$PROJECT_DIR$/L04 - Interface og comparable/L04 - Interface og comparable.iml" filepath="$PROJECT_DIR$/L04 - Interface og comparable/L04 - Interface og comparable.iml" />
@@ -21,7 +22,10 @@
       <module fileurl="file://$PROJECT_DIR$/L15 - Divide and conquer/L15 - Divide and conquer.iml" filepath="$PROJECT_DIR$/L15 - Divide and conquer/L15 - Divide and conquer.iml" />
       <module fileurl="file://$PROJECT_DIR$/L16 - Design patterns og singleton/L16 - Design patterns og singleton.iml" filepath="$PROJECT_DIR$/L16 - Design patterns og singleton/L16 - Design patterns og singleton.iml" />
       <module fileurl="file://$PROJECT_DIR$/L17 - Iterator og composite/L17 - Iterator og composite.iml" filepath="$PROJECT_DIR$/L17 - Iterator og composite/L17 - Iterator og composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L18 - Arkitektur og serialisering/L18 - Arkitektur og serialisering.iml" filepath="$PROJECT_DIR$/L18 - Arkitektur og serialisering/L18 - Arkitektur og serialisering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProeveEksamen/ProeveEksamen.iml" filepath="$PROJECT_DIR$/ProeveEksamen/ProeveEksamen.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programmering 2. semester.iml" filepath="$PROJECT_DIR$/Programmering 2. semester.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Skabeloner - Eksamen/Skabeloner - Eksamen.iml" filepath="$PROJECT_DIR$/Skabeloner - Eksamen/Skabeloner - Eksamen.iml" />
     </modules>
   </component>
 </project>

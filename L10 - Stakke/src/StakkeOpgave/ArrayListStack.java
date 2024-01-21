@@ -42,4 +42,26 @@ public class ArrayListStack implements StackI {
     public boolean isEmpty() {
         return stack.size() == 0;
     }
+
+    public static void main(String[] args) {
+        ArrayListStack stack = new ArrayListStack();
+
+        // Test push
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        // Test peek
+        System.out.println("Top element: " + stack.peek()); // should print 3
+
+        // Test size
+        System.out.println("Size of stack: " + stack.size()); // should print 3
+
+        // Test isEmpty
+        System.out.println("Is stack empty? " + stack.isEmpty()); // should print false
+
+        // Test pop
+        System.out.println("Popped element: " + stack.pop()); // should print 3
+        System.out.println("Size of stack after pop: " + stack.size()); // should print 2
+    }
 }

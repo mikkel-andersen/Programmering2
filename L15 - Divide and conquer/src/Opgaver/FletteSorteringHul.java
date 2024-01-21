@@ -31,19 +31,23 @@ public class FletteSorteringHul {
             if (list.get(i1) < list.get(i2)) {
         // s1's første tal er mindst
                 temp.add(list.get(i1));
+                System.out.println(temp);
                 i1++;
             } else { // s2's første tal er mindst
                 temp.add(list.get(i2));
+                System.out.println(temp);
                 i2++;
             }
         }
         // tøm den liste der ikke er tom
         while (i1 <= middle) {
             temp.add(list.get(i1));
+            System.out.println(temp);
             i1++;
         }
         while (i2 <= high) {
             temp.add(list.get(i2));
+            System.out.println(temp);
             i2++;
         }
         for (int i = 0; i < temp.size(); i++) {

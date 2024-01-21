@@ -44,9 +44,10 @@ class PersonCollectionTest {
         iterator.next();
         iterator.next();
         iterator.next();
-        assertThrows(ConcurrentModificationException.class, () -> {
+        Exception exception = assertThrows(IndexOutOfBoundsException.class, () -> {
             iterator.next();
         });
+        assertEquals("Ikke flere elementer", exception.getMessage());
     }
 
     @Test

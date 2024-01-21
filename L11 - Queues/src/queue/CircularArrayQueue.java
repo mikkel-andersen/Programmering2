@@ -74,4 +74,24 @@ public class CircularArrayQueue implements QueueI
             tail = currentSize;
         }
     }
+
+    public static void main(String[] args) {
+        CircularArrayQueue queue = new CircularArrayQueue(3);
+
+        // Test enqueue
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+
+        // Test dequeue
+        System.out.println("Dequeued element: " + queue.dequeue()); // should print 1
+        System.out.println("Dequeued element: " + queue.dequeue()); // should print 2
+        System.out.println("Dequeued element: " + queue.dequeue()); // should print 3
+
+        // Test size
+        System.out.println("Size of queue: " + queue.size()); // should print 0
+
+        // Test isEmpty
+        System.out.println("Is queue empty? " + queue.isEmpty()); // should print true
+    }
 }

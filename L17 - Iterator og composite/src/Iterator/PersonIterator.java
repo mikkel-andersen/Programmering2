@@ -20,7 +20,7 @@ public class PersonIterator implements Iterator<Person> {
     @Override
     public Person next() {
         if (!hasNext()) {
-            throw new RuntimeException("Ikke flere elementer");
+            throw new IndexOutOfBoundsException("Ikke flere elementer");
         }
         Person nextPerson = persons[index];
         index++;
